@@ -1,16 +1,18 @@
 
 ## Progress Boilerplate README
 
-Screenshot 5 ⬇️
-<img src="/screenshots/5.png" width="600" alt="">
-Screenshot 4 ⬇️
-<img src="/screenshots/4.png" width="600" alt="">
-Screenshot 3 ⬇️
-<img src="/screenshots/3.png" width="600" alt="">
-Screenshot 2 ⬇️
-<img src="/screenshots/2.png" width="600" alt="">
-Screenshot 1 ⬇️
-<img src="/screenshots/1.png" width="600" alt="">
+Coded from 7:30 AM to 4 PM on Nov, 20, 2019
+<br/>
+Screenshot 5 ⬇️ <br/>
+<img src="/screenshots/5.png" width="600" alt=""> <br/>
+Screenshot 4 ⬇️ <br/>
+<img src="/screenshots/4.png" width="600" alt=""> <br/>
+Screenshot 3 ⬇️ <br/>
+<img src="/screenshots/3.png" width="600" alt=""> <br/>
+Screenshot 2 ⬇️ <br/>
+<img src="/screenshots/2.png" width="600" alt=""> <br/>
+Screenshot 1 ⬇️ <br/>
+<img src="/screenshots/1.png" width="600" alt=""> <br/>
 
 Installed Sass
 ```npm install node-sass --save```
