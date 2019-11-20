@@ -10,7 +10,8 @@ class InstagramCaptionFormatter extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: 'test BBthis should be boldBB IIthis should be italicII blaballaballabal \n \n BIthis should be bold italicBI blabal \n and TYPthis should be typewriterTYP bla',
+            value: '',
+            // value: 'test BBthis should be boldBB IIthis should be italicII blaballaballabal \n \n BIthis should be bold italicBI blabal \n and TYPthis should be typewriterTYP bla',
             charCount: 0,
             bold: "BB",
             italic: "II",
@@ -66,6 +67,7 @@ class InstagramCaptionFormatter extends React.Component {
                 <textarea 
                     className="form--input"
                     maxLength="2200"
+                    placeholder="Write here..."
                     value={this.state.value} 
                     onChange={this.handleChange}
                 />
@@ -79,11 +81,6 @@ class InstagramCaptionFormatter extends React.Component {
                         onClick={() => this.convert()}>
                             CONVERT
                     </button>
-                </div>
-
-                <div className="form--links">
-                    <a href="https://lingojam.com/FancyTextGenerator" target="_blank" rel="noopener noreferrer">Github</a>
-                    <a href="https://lingojam.com/FancyTextGenerator" target="_blank" rel="noopener noreferrer">Fancy Text Generator</a>
                 </div>
 
             </div>
