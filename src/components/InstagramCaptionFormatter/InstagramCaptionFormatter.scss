@@ -1,0 +1,44 @@
+.form {
+    // background: black;
+    text-align: center;
+    padding-top: 20px;
+    margin: 0 auto;
+    width: 500px;
+    &--title{
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+    &--specialcharacters{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        &--input {
+            width: 30px;
+            border-radius: 5px;
+            border: 1px solid lightgray;
+        }
+    }
+    &--input {
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+        font-weight: normal; 
+        border: 1px solid lightgray;
+    }
+    &--charcount {
+        text-align: right;
+        color: gray;
+    }
+    &--submit {
+        width: 100px;
+        padding: 5px;
+        margin-top: 5px;
+    }
+    &--links {
+        margin-top: 30px;
+    }
+}

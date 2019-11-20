@@ -1,3 +1,8 @@
+Installed Sass
+```npm install node-sass --save```
+
+Installed Material UI and React Bootstrap but decided against using those.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
