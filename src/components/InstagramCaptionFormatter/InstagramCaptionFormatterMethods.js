@@ -25,7 +25,6 @@ export const AddSpecialCharacters = (text, marker, type) => {
     var specialCharacters = bold;
     if(type === "bold"){
         specialCharacters = bold;
-        //later on we will add the other types: italic, bold italic, and typewriter
     }else if(type === "italic"){
         specialCharacters = italic;
     } else if (type === "bolditalic") {
@@ -38,7 +37,7 @@ export const AddSpecialCharacters = (text, marker, type) => {
 
     var newText = text
     //find all instances of string that are between the marker using RegEx
-    var regex = new RegExp(marker + "[a-z- *1-9]+" + marker, 'g')
+    var regex = new RegExp(marker + "[a-z- A-Z1-9]+" + marker, 'g')
     //will return an array
     //e.g. newText = test BB this is bold BB and BB here BB 
     let matches = newText.match(regex)
