@@ -1,11 +1,27 @@
+
+## Progress Boilerplate README
+
+Screenshot 5 ⬇️
+<img src="/screenshots/5.png" width="600" alt="">
+Screenshot 4 ⬇️
+<img src="/screenshots/4.png" width="600" alt="">
+Screenshot 3 ⬇️
+<img src="/screenshots/3.png" width="600" alt="">
+Screenshot 2 ⬇️
+<img src="/screenshots/2.png" width="600" alt="">
+Screenshot 1 ⬇️
+<img src="/screenshots/1.png" width="600" alt="">
+
 Installed Sass
 ```npm install node-sass --save```
 
 Installed Material UI and React Bootstrap but decided against using those.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+
+## React Boilerplate README
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
