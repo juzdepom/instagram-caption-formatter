@@ -11,7 +11,6 @@ class InstagramCaptionFormatter extends React.Component {
         super(props);
         this.state = {
             value: '',
-            // value: 'test BBthis should be boldBB IIthis should be italicII blaballaballabal \n \n BIthis should be bold italicBI blabal \n and TYPthis should be typewriterTYP bla',
             charCount: 0,
             copyToClipboardButtonIsShowing: false,
             bold: "BB",
@@ -48,7 +47,6 @@ class InstagramCaptionFormatter extends React.Component {
             value: newValue,
             charCount, 
         })
-        // alert('A name was submitted: ' + newValue);
     }
 
     copyToClipboard = (e) => {
@@ -58,11 +56,19 @@ class InstagramCaptionFormatter extends React.Component {
         alert('copied to clipboard!')
     }
 
+    clearText = () => {
+        this.setState({
+            value: ''
+        })
+    }
+
     render(){
         return (
             <div className="form">
 
-                <div className="form--title">Instagram Caption Formatter</div>
+                <div className="form--title">
+                    Instagram Caption Formatter
+                </div>
                 
                 <div className="form--specialcharacters">
                     <span>𝐛𝐨𝐥𝐝 = {this.state.bold}</span>
@@ -74,6 +80,17 @@ class InstagramCaptionFormatter extends React.Component {
                     <span>𝚝𝚢𝚙𝚎𝚠𝚛𝚒𝚝𝚎𝚛 = {this.state.typewriter}</span>
                     {/* <input className="form--specialcharacters--input" type="text" defaultValue={this.state.typewriter}/> */}
                 </div>
+
+                <div className="form--clear">
+                    {
+                        (this.state.value !== '') &&
+                        <button className="form--clear-button" 
+                            onClick={() => this.clearText()}>
+                                CLEAR TEXT
+                        </button>
+                    }
+                </div>
+                
 
                 <textarea 
                     ref={(textarea) => this.textArea = textarea}
@@ -94,6 +111,7 @@ class InstagramCaptionFormatter extends React.Component {
                         onClick={() => this.convert()}>
                             CONVERT
                     </button>
+                    
 
                     {
                         this.state.copyToClipboardButtonIsShowing && document.queryCommandSupported('copy') &&
