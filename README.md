@@ -21,8 +21,6 @@ Installed Material UI and React Bootstrap but decided against using those.
 
 TO DO: right now, if have any odd characters such as ",:'" , it doesn't convert the text. Need to do something to fix this. Either set a temporary alert to let the user know, or make it so that the code doesn't care."
 
-
-
 ## React Boilerplate README
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -5,7 +5,7 @@
     padding: 20px;
     margin: 0 auto;
     margin-top: 40px;
-    width: 500px;
+    max-width: 500px;
     box-shadow: 8px 8px rgba(0, 0, 0, 0.3);
     &--title{
         font-size: 30px;
@@ -15,6 +15,7 @@
         margin: 0 auto;
         width: 90%;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 5px;
         margin-top: 10px;
@@ -40,6 +41,12 @@
         width: 95%;
         text-align: right;
         color: gray;
+    }
+    &--buttons {
+        margin-top: 15px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
     }
     &--submit {
         background-color: #09d3ac;

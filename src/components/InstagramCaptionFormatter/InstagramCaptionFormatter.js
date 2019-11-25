@@ -13,6 +13,7 @@ class InstagramCaptionFormatter extends React.Component {
             value: '',
             // value: 'test BBthis should be boldBB IIthis should be italicII blaballaballabal \n \n BIthis should be bold italicBI blabal \n and TYPthis should be typewriterTYP bla',
             charCount: 0,
+            copyToClipboardButtonIsShowing: false,
             bold: "BB",
             italic: "II",
             bolditalic: "BI",
@@ -39,12 +40,22 @@ class InstagramCaptionFormatter extends React.Component {
         newValue = AddSpecialCharacters(newValue, this.state.italic, "italic")
         newValue = AddSpecialCharacters(newValue, this.state.bolditalic, "bolditalic")
         newValue = AddSpecialCharacters(newValue, this.state.typewriter, "typewriter")
+
+        let copyToClipboardButtonIsShowing = (value !== "") ? true : false;
         // console.log(newValue)
         this.setState({
+            copyToClipboardButtonIsShowing,
             value: newValue,
             charCount, 
         })
         // alert('A name was submitted: ' + newValue);
+    }
+
+    copyToClipboard = (e) => {
+        this.textArea.select();
+        document.execCommand('copy');
+        // e.target.focus();
+        alert('copied to clipboard!')
     }
 
     render(){
@@ -65,6 +76,7 @@ class InstagramCaptionFormatter extends React.Component {
                 </div>
 
                 <textarea 
+                    ref={(textarea) => this.textArea = textarea}
                     className="form--input"
                     maxLength="2200"
                     placeholder="Write here..."
@@ -76,11 +88,20 @@ class InstagramCaptionFormatter extends React.Component {
                     {this.state.charCount}/2200
                 </div>
 
-                <div>
+                <div className="form--buttons">
+
                     <button className="form--submit" 
                         onClick={() => this.convert()}>
                             CONVERT
                     </button>
+
+                    {
+                        this.state.copyToClipboardButtonIsShowing && document.queryCommandSupported('copy') &&
+                        <button className="form--submit" 
+                        onClick={() => this.copyToClipboard()}>
+                            COPY TO CLIPBOARD
+                        </button>
+                    }
                 </div>
 
             </div>
